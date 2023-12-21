@@ -30,7 +30,6 @@ jobs:
         path: bars.png
 
     - name: Create CML report
-
       run: 
        echo "# First Line of our report" >> report.md
        echo "## Bar Plots" >> report.md
