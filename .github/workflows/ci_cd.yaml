@@ -22,12 +22,6 @@ jobs:
       run:
        python main.py
 
-    - name: Display Plot
-      if: always()  # Optional: Display the plot even if the job fails
-      run: |
-        echo "Displaying the plot..."
-        python -c "import matplotlib.pyplot as plt; plt.imshow(plt.imread('bars.png')); plt.show()"
-
     - name: Save Plot as Artifact
       if: always()  # Optional: Save the plot as a GitHub Actions artifact
       uses: actions/upload-artifact@v2
