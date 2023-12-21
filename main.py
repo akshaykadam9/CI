@@ -9,3 +9,4 @@ def ak():
 
 print(ab(4,5))
 print(cd(10,5))
+print(ak())
