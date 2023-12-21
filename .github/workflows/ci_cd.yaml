@@ -27,7 +27,11 @@ jobs:
         with:
           name: plots
           path: bars.png
-
+        
+      - name: Install CML
+        run:
+          python -m pip install cml
+          
       - name: Create CML report
         run: |
           echo "# First Line of our report" >> report.md
