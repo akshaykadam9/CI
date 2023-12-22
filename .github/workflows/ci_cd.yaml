@@ -28,9 +28,12 @@ jobs:
     
 
     - name: Create CML report
+      env:
+        REPO_TOKEN: ${{secrets.AK_GIT}}
       run: |
         echo "# First Line of our report" >> report.md
         echo "## Bar Plots" >> report.md
         echo '![](./bars.png "Bar plot")' >> report.md
    
+        
         cml comment create report.md
